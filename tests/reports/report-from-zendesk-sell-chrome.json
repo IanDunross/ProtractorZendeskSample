@@ -1,0 +1,185 @@
+[
+  {
+    "description": "Feature Description:\nThis is Homework from Zendesk",
+    "keyword": "Feature",
+    "name": "Zendesk Homework",
+    "line": 1,
+    "id": "zendesk-homework",
+    "tags": [],
+    "uri": "tests\\features\\loginPage.feature",
+    "elements": [
+      {
+        "id": "zendesk-homework;login-to-application-and-go-to-sell-page",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Login to application and go to Sell Page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I'm on the Zendesk login page",
+            "match": {
+              "location": "tests\\step_definitions\\loginPage.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1703000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I log in with Username \"james-howlett@wp.pl\" and Password \"JohnnyCage\" credentials",
+            "match": {
+              "location": "tests\\step_definitions\\loginPage.steps.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1637000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see user options of the main page and I click it",
+            "match": {
+              "location": "tests\\step_definitions\\mainPage.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3305000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I click user options with title like \"Sales CRM\"",
+            "match": {
+              "location": "tests\\step_definitions\\mainPage.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 722000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I'm switch browser tab to tab number 2",
+            "match": {
+              "location": "tests\\step_definitions\\mainPage.steps.ts:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see header of the Sell Page like \"My Dashboard\"",
+            "match": {
+              "location": "tests\\step_definitions\\sellPage.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6879000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "zendesk-homework;adding-a-lead",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Adding a Lead",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I add a Lead with information like first name \"TestingOnProd\" and last name \"MBankStyle\"",
+            "match": {
+              "location": "tests\\step_definitions\\sellPage.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1617000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I am on the added Lead details page with status of the lead like \"New\"",
+            "match": {
+              "location": "tests\\step_definitions\\sellPage.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1127000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Test",
+            "match": {
+              "location": "tests\\step_definitions\\sellPage.steps.ts:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I'm do nothing and wait for 4000 miliseconds",
+            "match": {
+              "location": "tests\\step_definitions\\loginPage.steps.ts:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4002000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
