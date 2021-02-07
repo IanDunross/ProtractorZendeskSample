@@ -14,7 +14,7 @@ Scenario: Login to application and go to Sell Page
        Then I should see header of the Sell Page like "My Dashboard"
 
 
-       Scenario: Adding a Lead
+       Scenario: Adding a Lead and check status
        When I add a Lead with information like first name "TestingOnProd" and last name "MBankStyle"
        And I am on the added Lead details page with status of the lead like "New"
 
@@ -23,13 +23,12 @@ Scenario: Login to application and go to Sell Page
        And I click settings option: Leads
        And I click Leads option with name "Lead Status"
        And I click edit button for status with name "New"
-       # This step below is not finished
-      When I edit lead status from: "New" to: "Change"
-      Then I go back to my details lead page
-      And I am on the added Lead details page with status of the lead like "Change"
+       When I edit lead status from: "New" to: "Change"
+       Then I go back to my details lead page
+       And I am on the added Lead details page with status of the lead like "Change"
 
 
-       Scenario: Go back to the Lead status in settings to "New"
+       Scenario: Reverse change from previous scenario - and go back to original status of the Lead "New"
        When I click setting on the sell page
        And I click settings option: Leads
        And I click Leads option with name "Lead Status"
