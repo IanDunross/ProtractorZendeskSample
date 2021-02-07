@@ -25,4 +25,4 @@ Scenario: Login to application and go to Sell Page
        And I click edit button for status with name "New"
        # Then I'm do nothing and wait for 5000 miliseconds
        # This step below is not finished
-       #  And I edit lead status for name like: "MyNewStatusName"
+       # And I edit lead status for name like: "MyNewStatusName"

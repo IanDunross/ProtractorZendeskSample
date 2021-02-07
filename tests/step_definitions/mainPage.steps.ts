@@ -7,7 +7,7 @@ const mainPage: MainPagePo = new MainPagePo();
 
 Then(/^I should see user options of the main page and I click it$/, {timeout: 2 * 5000}, async () =>{
 
-  await browser.wait(ExpectedConditions.visibilityOf(mainPage.getZendeskProductButton()), 5000,'Element is not visible').then(async () => {
+    await browser.wait(ExpectedConditions.visibilityOf(mainPage.getZendeskProductButton()), 5000,'Element is not visible').then(async () => {
     const userOptionsButton = await mainPage.getZendeskProductButton();
     await userOptionsButton.click();
 })

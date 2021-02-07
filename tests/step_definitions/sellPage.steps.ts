@@ -43,6 +43,6 @@ Then(/^I add a Lead with information like first name "([^"]*)" and last name "([
   Then(/^I click setting on the sell page$/, {timeout: 2 * 5000}, async () =>{
 
 
-  await sellPage.getSettingButton().click();
+    await sellPage.getSettingButton().click();
   
   })
