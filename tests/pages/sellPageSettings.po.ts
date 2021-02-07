@@ -14,7 +14,7 @@ export class SettingsSellPagePo {
     return element(by.id(Selectors.settingsMainCointeinerOfOption)).element(by.xpath(xpath));
   }
 
-  getEditStatusInput(){
-    return element(by.css('input[id="name"]'));
+  getEditStatusInputByCurrentValue(nameOfCurrentStatus){
+    return element(by.css('input[data-current-value="' + nameOfCurrentStatus + '"]'));
   }
 }

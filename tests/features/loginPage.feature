@@ -23,6 +23,17 @@ Scenario: Login to application and go to Sell Page
        And I click settings option: Leads
        And I click Leads option with name "Lead Status"
        And I click edit button for status with name "New"
-       # Then I'm do nothing and wait for 5000 miliseconds
        # This step below is not finished
-       # And I edit lead status for name like: "MyNewStatusName"
+      When I edit lead status from: "New" to: "Change"
+      Then I go back to my details lead page
+      And I am on the added Lead details page with status of the lead like "Change"
+
+
+       Scenario: Go back to the Lead status in settings to "New"
+       When I click setting on the sell page
+       And I click settings option: Leads
+       And I click Leads option with name "Lead Status"
+       And I click edit button for status with name "Change"
+       When I edit lead status from: "Change" to: "New"
+       Then I go back to my details lead page
+       And I am on the added Lead details page with status of the lead like "New"

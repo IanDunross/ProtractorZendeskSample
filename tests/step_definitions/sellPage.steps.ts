@@ -46,3 +46,12 @@ Then(/^I add a Lead with information like first name "([^"]*)" and last name "([
     await sellPage.getSettingButton().click();
   
   })
+
+  Then(/^I go back to my details lead page$/, {timeout: 2 * 5000}, async () =>{
+
+   
+    await browser.get(myUrlOfSpecificLead);
+  
+      
+  })
+
