@@ -1,5 +1,6 @@
 import { browser, by, element } from "protractor";
 import { Selectors } from "./support/selectors.enum";
+
 export class SellPagePo {
   getDashboardPageTitle() {
     return element(by.xpath('//div[contains(@class, "dashboardTitle")]'));
@@ -32,22 +33,7 @@ export class SellPagePo {
     return element(by.className('lead-status'))
   }
 
-  // switchToFrame(number){
-  //   return browser.switchTo().frame(number);
-  // }
-  // turnOnOffAngularWaiting(decision) {
-  //   return browser.waitForAngularEnabled(decision);
-  // }
-
-  // getLoginPageEmailInput() {
-  //   return element(by.id(Selectors.loginEmailInput));
-  // }
-
-  // getLoginPagePasswordInput() {
-  //   return element(by.id(Selectors.loginPasswordInput));
-  // }
-
-  // getLoginSubmitButton() {
-  //   return element(by.id(Selectors.loginSignInButton));
-  // }
+  getSettingButton(){
+    return element(by.id(Selectors.settingsButtonFromSellPage));
+  }
 }

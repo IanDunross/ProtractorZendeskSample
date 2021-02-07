@@ -6,24 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pree2e": "webdriver-manager update",
-    "chromeZendesk": "protractor ./tests/configurations/chromeProtractorConfiguration.js"
+    "chromeZendesk": "protractor ./tests/configurations/chromeProtractorConfiguration.js",
+    "generateReportZendesk": "node ./tests/reports/index-chrome.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IanDunross/ProtractorZendekSample.git"
+    "url": "git+https://github.com/IanDunross/ProtractorZendeskSample.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IanDunross/ProtractorZendekSample/issues"
+    "url": "https://github.com/IanDunross/ProtractorZendeskSample/issues"
   },
-  "homepage": "https://github.com/IanDunross/ProtractorZendekSample#readme",
+  "homepage": "https://github.com/IanDunross/ProtractorZendeskSample#readme",
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^14.14.25",
     "chai": "^4.3.0",
     "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.3.0",
     "protractor": "^7.0.0",
     "protractor-cucumber-framework": "^6.2.1",
     "ts-node": "^9.1.1",

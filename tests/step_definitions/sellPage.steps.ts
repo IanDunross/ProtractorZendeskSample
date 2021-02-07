@@ -4,33 +4,23 @@ import {browser, ExpectedConditions, element, by} from 'protractor';
 import {SellPagePo} from '../pages/sellPage.po'
 
 const sellPage: SellPagePo = new SellPagePo();
-let myUrl;
+// I wanted use this url later to go back for specific lead and check status
+let myUrlOfSpecificLead;
 
 Then(/^I should see header of the Sell Page like "([^"]*)"$/, {timeout: 2 * 5000}, async (text) =>{
 
-// const userOptionsButton = await mainPage.getZendeskProductButton();
-// expect(await userOptionsButton.isDisplayed()).to.equal(true);
-// await userOptionsButton.click();
-  await browser.wait(ExpectedConditions.visibilityOf(sellPage.getDashboardPageTitle()), 5000).then(async () => {
+  await browser.wait(ExpectedConditions.visibilityOf(sellPage.getDashboardPageTitle()), 7000).then(async () => {
     const dashboardTitle = await sellPage.getDashboardPageTitle();
     expect(await dashboardTitle.getText()).to.equal(text);
 })
-//   browser.wait(ExpectedConditions.visibilityOf(mainPage.getZendeskProductButton()), 5000).then(async () => {
-//     const userOptionsLogoutButton = await mainPage.getSignOutButtonFromUsersOptions();
-//     await userOptionsLogoutButton.click();
-// })
 
 })
 
 Then(/^I add a Lead with information like first name "([^"]*)" and last name "([^"]*)"$/, {timeout: 2 * 5000}, async (firstName,lastName) =>{
 
-  // const userOptionsButton = await mainPage.getZendeskProductButton();
-  // expect(await userOptionsButton.isDisplayed()).to.equal(true);
-  // await userOptionsButton.click();
-  // console.log('pokaz ' + await sellPage.getMenuItemFromLeadAdd().isPresent())
-  await sellPage.getAddLeadButton().click();
-  // console.log('pokaz ' + await sellPage.getMenuItemFromLeadAdd().isDisplayed())
-    await browser.wait(ExpectedConditions.visibilityOf(sellPage.getMenuItemFromLeadAdd()), 5000).then(async () => {
+
+      await sellPage.getAddLeadButton().click();
+      await browser.wait(ExpectedConditions.visibilityOf(sellPage.getMenuItemFromLeadAdd()), 5000).then(async () => {
       await sellPage.getLeadOptionFromAddLeadMenu().click();
       await sellPage.getAddLeadMenuFirstNameInput().clear();
       await sellPage.getAddLeadMenuLastNameInput().clear();
@@ -46,15 +36,13 @@ Then(/^I add a Lead with information like first name "([^"]*)" and last name "([
 
 
     expect(await sellPage.getLeadStatusFromDetailPage().getText()).to.equal(statusOfTheLead);
-    myUrl = await browser.getCurrentUrl();
+    myUrlOfSpecificLead = await browser.getCurrentUrl();
   
   })
 
-
-  
-  Then(/^Test$/, {timeout: 2 * 5000}, async () =>{
+  Then(/^I click setting on the sell page$/, {timeout: 2 * 5000}, async () =>{
 
 
-console.log('pokaz urla ' + myUrl)
+  await sellPage.getSettingButton().click();
   
   })
