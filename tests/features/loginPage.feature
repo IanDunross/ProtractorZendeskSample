@@ -22,7 +22,7 @@ Scenario: Login to application and go to Sell Page
        When I click setting on the sell page
        And I click settings option: Leads
        And I click Leads option with name "Lead Status"
-       And I click edit button for status with name "Working"
-       Then I'm do nothing and wait for 5000 miliseconds
+       And I click edit button for status with name "New"
+       # Then I'm do nothing and wait for 5000 miliseconds
        # This step below is not finished
        #  And I edit lead status for name like: "MyNewStatusName"
