@@ -14,7 +14,7 @@ https://nodejs.org/en/
 
 #### 1.) Install npm (for example as Node.js default package manager).
 #### 2.) Download or clone repository.
-#### 3.) Add environment variables with proper e-mail value, and password value for account E2E_Zendesk_Email and E2E_Zendesk_Password
+#### 3.) Add environment variables with proper e-mail value, and password value for account `E2E_Zendesk_Email` and `E2E_Zendesk_Password`
 #### 4.) Use command `npm install` in the repository folder (package.json file location).
 #### 5.) Before first use of tests, please use `npm run pree2e` script for download latest chrome driver.
 #### 6.) Use `npm run chromeZendesk` script for run tests on Chrome.
